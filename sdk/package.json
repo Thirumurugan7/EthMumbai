@@ -1,6 +1,6 @@
 {
   "name": "onesign",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "description": "A React component for displaying greeting messages",
   "main": "dist/index.js",
   "scripts": {
