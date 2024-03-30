@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import Connbutton from './Connect';
-// import Airdrop from '../assets/airdrop.png'
+import Logo from "../assets/OneSignLogo.png";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -12,26 +12,33 @@ const Navbar = () => {
 
   return (
     <div className="bg-transparent top-0 z-50 w-full fixed backdrop-filter backdrop-blur-lg bg-opacity-20">
-      <div className="flex items-center p-3 text-white text-xl justify-between grotesk-font mt-2">
-        <a href="/">⫷ OneSign /⫸</a>
-        {/* <a to='/'><img className=' h-12 hover:scale-105 hover:cursor-pointer' src={Airdrop} alt="" /></a> */}
+      <div className="flex items-center p-3 mx-3 text-white text-xl justify-between grotesk-font">
+        {/* <a href="/">⫷ OneSign /⫸</a> */}
+        <a to="/">
+          <img
+            className=" h-12 hover:scale-105 hover:cursor-pointer"
+            src={Logo}
+            alt=""
+          />
+        </a>
         <ul className="flex justify-center space-x-6 ">
-          <li className="hover:cursor-pointer transition-transform hover:scale-105 ease-in-out">
-            <Link to='/'
-              className={"`menu-item`"}
+          <li className="hover:cursor-pointer transition-transform hover:scale-95 ease-in-out">
+            <Link
+              to="/"
+              className={
+                "`menu-item`"
+              }
               activeClassName="active"
               onMouseEnter={() => handleMenuClick("home")}
-
-              
             >
-              Home 🏠
+              Home
             </Link>
           </li>
           <li className="hover:cursor-pointer transition-transform hover:scale-95 ease-in-out">
             <Link
               to="/track"
               className={
-                "py-3 px-3  border-2 gradient-border cursor-pointer font-semibold text-white hover:bg-gradient-to-r from-emerald-500 via-violet-600 to-emerald-500 hover:text-black `menu-item`"
+                "`menu-item`"
               }
               activeClassName="active"
               onMouseEnter={() => handleMenuClick("track")}
@@ -39,17 +46,17 @@ const Navbar = () => {
               Track transactions
             </Link>
           </li>
-          {/* <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
-            <a
-              
-              className={`menu-item`}
-              activeClassName="active"
-              onMouseEnter={() => handleMenuClick('docs')}
-            > 
-              Docs
-            </a>
-          </li>
           <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+            <Link to="/projectid" 
+              
+              className={"py-3 px-3  border-2 gradient-border cursor-pointer font-semibold text-white hover:bg-gradient-to-r from-emerald-500 via-violet-600 to-emerald-500 hover:text-black `menu-item`"}
+              activeClassName="active"
+              onMouseEnter={() => handleMenuClick('devs')}
+            > 
+              Developers
+            </Link>
+          </li>
+          {/* <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
             <a
 
               className={`menu-item`}
