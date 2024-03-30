@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Onesign from "../assets/onesign.png";
 import Navbar from "../components/Navbar";
 import Chart from "../Chartjs/Chart";
@@ -8,6 +8,7 @@ const Track = () => {
     OneSignid: ""
   });
   const [showChart, setShowChart] = useState(false); // State to track whether to show the chart or not
+  const chartRef = useRef(null); // Reference to the chart component
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,11 +19,15 @@ const Track = () => {
   };
 
   const handleTrackNowClick = () => {
-    // Perform any necessary actions when the "Track Now" button is clicked
-    // For now, just set showChart to true to display the chart
     setShowChart(true);
-    alert("Scroll down"); // Display alert when the button is clicked
+    alert("Scrolling down to the analysis...");
   };
+
+  useEffect(() => {
+    if (showChart && chartRef.current) {
+      chartRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [showChart]);
 
   return (
     <div className="gradient-container h-full grotesk-font overflow-x-hidden">
@@ -50,7 +55,7 @@ const Track = () => {
             <div className="flex justify-center items-center hover:scale-95 ease-in-out duration-150 pt-6">
               <button
                 className="py-3 px-3 w-32 border-2 flex justify-center gradient-border cursor-pointer font-semibold text-white hover:bg-gradient-to-r from-emerald-500 via-violet-600 to-emerald-500 hover:text-black"
-                onClick={handleTrackNowClick} // Call the function when the button is clicked
+                onClick={handleTrackNowClick}
               >
                 Track Now 🡥
               </button>
@@ -60,10 +65,10 @@ const Track = () => {
       </div>
       <div className="flex-col overflow-x-hidden">
         <div className="animate-pulse w-full pt-20">
-          <img className="" src={Onesign} alt="OneSign" />
+          <img className="w-full" src={Onesign} alt="OneSign" />
         </div>
-        {showChart && ( // Conditionally render the Chart component if showChart is true
-          <div className="flex justify-center pt-16">
+        {showChart && (
+          <div className="flex justify-center pt-16" ref={chartRef}>
             <Chart />
           </div>
         )}

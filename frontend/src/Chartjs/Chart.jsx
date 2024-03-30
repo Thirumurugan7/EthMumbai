@@ -25,21 +25,21 @@ function Chart() {
   });
 
   return (
-    <div className="grotesk-font">
-      <div className=" flex justify-center">
-        <div style={{ width: 500 }}>
+    <div className="grotesk-font overflow-x-hidden"> {/* Apply overflow-x-hidden */}
+      <div className="flex justify-center">
+        <div className="max-w-full" style={{ width: 500 }}> {/* Apply max-w-full */}
           <BarChart chartData={userData} />
         </div>
       </div>
 
-      <div className=" flex justify-center pt-10">
-        <div style={{ width: 500 }}>
+      <div className="flex justify-center pt-10">
+        <div className="max-w-full" style={{ width: 500 }}> {/* Apply max-w-full */}
           <LineChart chartData={userData} />
         </div>
       </div>
 
-      <div className=" flex justify-center pt-10">
-        <div style={{ width: 500 }}>
+      <div className="flex justify-center pt-10">
+        <div className="max-w-full" style={{ width: 500 }}> {/* Apply max-w-full */}
           <PieChart chartData={userData} />
         </div>
       </div>
