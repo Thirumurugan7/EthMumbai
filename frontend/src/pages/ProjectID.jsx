@@ -76,6 +76,8 @@ const ProjectID = () => {
 
           const res2 = await CreateProjectId({address:account.address, name:host.ProjectID});
 
+          console.log(res2)
+
        
         } else {
           console.log('No accounts found');
