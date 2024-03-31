@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Register } from '../inegration';
 
 const FormComponent = () => {
   // State to store the username and address
@@ -6,9 +7,12 @@ const FormComponent = () => {
   const [address, setAddress] = useState('');
 
   // Function to handle the form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevents the default form submit action
     console.log('Username:', username, 'Address:', address);
+    const res = await Register({name:username,useradd:address})
+    console.log(res);
+
     // You can also do more with the username and address here, like sending them to an API
   };
 

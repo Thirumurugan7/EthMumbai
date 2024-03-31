@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
+import { CreateProjectId } from '../inegration';
 
 const SignMessageComponent = () => {
   const [signedMessage, setSignedMessage] = useState('');
-  const [message, setMessage] = useState('Hello, this is a custom message!');
+  const [message, setMessage] = useState('Hello, Enter Your OneSign ID');
 
   const handleSignMessage = async () => {
     if (!window.ethereum) {
@@ -17,6 +18,12 @@ const SignMessageComponent = () => {
       const signer = provider.getSigner();
       const signature = await signer.signMessage(message);
       setSignedMessage(signature);
+
+    const recoveredAddress = await ethers.utils.verifyMessage(message, signature);
+    console.log(`Recovered address: ${recoveredAddress}`);
+
+    const res = await CreateProjectId({address:recoveredAddress, name:message});
+    console.log(res);
     } catch (error) {
       console.error('Error signing message:', error);
       alert('Error signing message. Check the console for more details.');
