@@ -1,6 +1,6 @@
-# OnSign SDK
+# OneSign SDK
 
-OnSign SDK is a comprehensive development toolkit designed to simplify and enhance the user onboarding process for decentralized applications (DApps). By providing a set of easy-to-use components, OnSign SDK aims to streamline the integration of sign-in and registration functionalities, making the onboarding experience seamless for developers and users alike.
+OneSign SDK is a comprehensive development toolkit designed to simplify and enhance the user onboarding process for decentralized applications (DApps). By providing a set of easy-to-use components, OneSign SDK aims to streamline the integration of sign-in and registration functionalities, making the onboarding experience seamless for developers and users alike.
 
 ## Features
 
@@ -9,14 +9,14 @@ OnSign SDK is a comprehensive development toolkit designed to simplify and enhan
 
 ## Getting Started
 
-Follow these steps to integrate OnSign SDK into your DApp.
+Follow these steps to integrate OneSign SDK into your DApp.
 
 ### Installation
 
-Start by installing the `onsign` package using npm. Open your terminal and run:
+Start by installing the `OneSign` package using npm. Open your terminal and run:
 
 ```bash
-npm install onsign
+npm install OneSign
 ```
 
 # Importing Components
@@ -26,7 +26,7 @@ After installation, you can import the Sign and Register components into your pr
 To import the Sign component:
 
 ```javascript
-import { Sign } from 'onsign';
+import { Sign } from 'OneSign';
 ```
 
 
@@ -35,7 +35,7 @@ To import the Register component:
 
 ```javascript
 
-import { Register } from 'onsign';
+import { Register } from 'OneSign';
 ```
 
 ```javascript
@@ -53,11 +53,11 @@ Similarly, the Register component can be used to embed a registration form withi
 onSuccess: A callback function that is called when the registration is successful.
 onError: A callback function that is called if there is an error during the registration process.
 Documentation
-For detailed documentation on all features and components provided by OnSign SDK, including advanced configurations and examples, please visit our official documentation.
+For detailed documentation on all features and components provided by OneSign SDK, including advanced configurations and examples, please visit our official documentation.
 
 ### Support
-If you encounter any issues or have questions regarding the OnSign SDK, please file an issue on our GitHub repository or contact our support team.
+If you encounter any issues or have questions regarding the OneSign SDK, please file an issue on our GitHub repository or contact our support team.
 
 ### Contributing
-We welcome contributions from the community! If you're interested in improving the OnSign SDK, see our contributing guidelines for more information.
+We welcome contributions from the community! If you're interested in improving the OneSign SDK, see our contributing guidelines for more information.
 
