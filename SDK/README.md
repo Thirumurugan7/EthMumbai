@@ -19,48 +19,45 @@ Start by installing the `onsign` package using npm. Open your terminal and run:
 npm install onsign
 ```
 
-
-Importing Components
+# Importing Components
 After installation, you can import the Sign and Register components into your project as follows:
 
-Sign Component
+### Sign Component
 To import the Sign component:
 
-javascript
-Copy code
+```javascript
 import { Sign } from 'onsign';
-Register Component
+```
+
+
+### Register Component
 To import the Register component:
 
-javascript
-Copy code
-import { Register } from 'onsign';
-Usage
-Sign Component
-The Sign component can be integrated into your DApp to provide a straightforward sign-in interface:
+```javascript
 
-jsx
-Copy code
+import { Register } from 'onsign';
+```
+
+```javascript
 <Sign onSuccess={handleSuccess} onError={handleError} />
+```
+
 onSuccess: A callback function that is invoked when the sign-in process is successful.
 onError: A callback function that is invoked in case of an error during the sign-in process.
 Register Component
 Similarly, the Register component can be used to embed a registration form within your DApp:
 
-jsx
-Copy code
+```javascript
 <Register onSuccess={handleSuccess} onError={handleError} />
+```
 onSuccess: A callback function that is called when the registration is successful.
 onError: A callback function that is called if there is an error during the registration process.
 Documentation
 For detailed documentation on all features and components provided by OnSign SDK, including advanced configurations and examples, please visit our official documentation.
 
-Support
+### Support
 If you encounter any issues or have questions regarding the OnSign SDK, please file an issue on our GitHub repository or contact our support team.
 
-Contributing
+### Contributing
 We welcome contributions from the community! If you're interested in improving the OnSign SDK, see our contributing guidelines for more information.
-
-License
-OnSign SDK is licensed under the MIT License. See the LICENSE file for more details.
 
