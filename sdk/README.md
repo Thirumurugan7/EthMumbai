@@ -30,7 +30,7 @@ After installation, you can import the Sign and Register components into your pr
 To import the Sign component:
 
 ```javascript
-import { Sign } from 'OneSign';
+import { Sign } from 'onesign';
 ```
 
 
@@ -39,7 +39,7 @@ To import the Register component:
 
 ```javascript
 
-import { Register } from 'OneSign';
+import { Register } from 'onesign';
 ```
 
 ```javascript
