@@ -46,7 +46,7 @@ const Navbar = () => {
               Track transactions
             </Link>
           </li>
-          <li className='hover:cursor-pointer transition-transform hover:scale-105 ease-in-out'>
+          <li className='hover:cursor-pointer transition-transform hover:scale-95 ease-in-out'>
             <Link to="/external" 
               className={"py-3 px-3  border-2 gradient-border cursor-pointer font-semibold text-white hover:bg-gradient-to-r from-emerald-500 via-violet-600 to-emerald-500 hover:text-black `menu-item`"}
               activeClassName="active"
