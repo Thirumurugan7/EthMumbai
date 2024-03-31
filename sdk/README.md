@@ -13,10 +13,14 @@ Follow these steps to integrate OneSign SDK into your DApp.
 
 ### Installation
 
-Start by installing the `OneSign` package using npm. Open your terminal and run:
+Start by installing the `onesign` package using npm. Open your terminal and run:
 
 ```bash
-npm install OneSign
+npm install onesign
+```
+or
+```bash
+yarn add onesign
 ```
 
 # Importing Components
